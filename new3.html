@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        header {
+            margin-bottom: 20px;
+        }
+        
+        header h1 {
+            font-size: 24px;
+            color: #ffffff;
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .book-card {
+            background-color: #2a2a2a;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .book-card h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        
+        .book-card p {
+            font-size: 16px;
+            color: #ffcd38;
+            margin-bottom: 5px;
+        }
+        
+        .book-card span {
+            font-size: 14px;
+            color: #cccccc;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .book-card button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .book-card button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+        
+            .book-card h3 {
+                font-size: 16px;
+            }
+        
+            .book-card p {
+                font-size: 14px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explore</h1>
+        </header>
+        <section class="book-grid">
+            <div class="book-card">
+                <img src="book-cover.jpg" alt="Book Cover">
+                <h3>Book Title</h3>
+                <p>$1.5</p>
+                <span>Transformation of career...</span>
+                <button>READ</button>
+            </div>
+            <!-- Add more book-card divs as needed -->
+        </section>
+    </div>
+</body>
+</html>
+
+    
+</body>
+</html>

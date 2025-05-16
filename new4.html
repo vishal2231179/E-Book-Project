@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Vista</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for the bookmark icon -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+
+<body>
+    <header class="header">
+        <img alt="Vista Logo" height="50" src="./Logo1.png" width="130" />
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Saved</a>
+            <a href="#">Notification</a>
+        </nav>
+        <a class="login-btn" href="#">Login</a>
+    </header>
+    <br><br><br><br>
+    <main class="main-content">
+        <h1>
+            <img src="./logo2.png" class="centerLogo" alt="">
+        </h1>
+    </main>
+
+    <br>
+    <center>
+        <div class="search-bar">
+            <i class="fas fa-bars"></i>
+            <input type="text" id="searchInput" placeholder="Search Your E-book" onkeyup="filterBooks()">
+            <i class="fas fa-search"></i>
+        </div>
+    </center>
+
+
+    
+
+    <section class="book-section">
+        <h3>Explore</h3>
+        <div class="book-grid" id="bookGrid">
+            <div class="book-card">
+                <img alt="Book cover of Bhagavad Gita" 
+                    src="./Books Thumbnail/41AnbvGOT3L._SY445_SX342_ 1.png" width="176" />
+                <h4>Bhagavad Gita <i class="far fa-bookmark"></i></h4>
+                <div class="actions">
+                    <p class="price">$1.5</p>
+                    <button onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                </div>
+                <p>Transformation of career...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for PDF -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openModal(pdfUrl) {
+            document.getElementById('pdfFrame').src = pdfUrl;
+            document.getElementById('pdfModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('pdfModal').style.display = "none";
+            document.getElementById('pdfFrame').src = ""; // Clear the PDF source
+        }
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function (event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function filterBooks() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const bookGrid = document.getElementById('bookGrid');
+            const bookCards = bookGrid.getElementsByClassName('book-card');
+
+            for (let i = 0; i < bookCards.length; i++) {
+                const title = bookCards[i].getElementsByTagName('h4')[0].innerText.toLowerCase();
+                if (title.includes(filter)) {
+                    bookCards[i].style.display = ""; // Show the card
+                } else {
+                    bookCards[i].style.display = "none"; // Hide the card
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

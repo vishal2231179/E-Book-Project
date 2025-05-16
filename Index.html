@@ -1,0 +1,543 @@
+<html>
+
+<head>
+    <title>
+        Page Vista
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./text_animation.css">
+</head>
+
+<body>
+    <br><br><br><br><br><br> <br><br>
+    <header class="header">
+        <img alt="Vista Logo" height="40" src="./Logo1.png" width="110" />
+        <nav>
+            <a href="#" onclick="window.location.href='http://127.0.0.1:5500/BLACK.HTML';">Home</a> <!-- Home Button -->
+            <a href="#" onclick="showSavedBooks()">Saved</a>
+            <a href="#">Notification</a>
+        </nav>
+        <a class="login-btn" href="./signup google.html">Login</a>
+    </header>
+
+    <!-- Text animation -->
+    <div class="text-container" id="text-container">
+        <span id="text"></span>
+        <span class="cursor"></span>
+    </div>
+
+    <br><br><br>
+    <main class="main-content">
+        <h1>
+            <img src="./logo2.png" class="centerLogo" alt="">
+        </h1>
+    </main>
+    <br>
+
+    <center>
+        <div class="search-bar">
+            <i class="fas fa-bars"></i>
+            <input type="text" id="searchInput" placeholder="Search Your E-book" onkeyup="filterBooks()">
+            <i class="fas fa-search"></i>
+        </div>
+    </center>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="book-card">
+            <img alt="Book cover of Bhagwad Gita" height="200" src="./Books Thumbnail/the bhagwat gita.png"
+                width="180" />
+            <div class="book-title">
+                Bhagwad Gita
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave(this, 'Bhagwad Gita')"></i>
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Magic Manifesting" height="200"
+                src="./Books Thumbnail/the magic manifesting.png" width="180" />
+            <div class="book-title">
+                The Magic Manif...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn"
+                    onclick="openModal('./Books PDFs/The Magic of Manifestation.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+                </i>
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of You Can" height="200" src="./Books Thumbnail/you can.png" width="180" />
+            <div class="book-title">
+                You Can
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of No Matter What" height="200" src="./Books Thumbnail/no matter what.png"
+                width="180" />
+            <div class="book-title">
+                No Matter What
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Mountain is You" height="200" src="./Books Thumbnail/the power of your subs.png"
+                width="180" />
+            <div class="book-title">
+                The Mountain is...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Power of a Positive Attitude" height="200"
+                src="./Books Thumbnail/the power of a positive attitude.png" width="180" />
+            <div class="book-title">
+                The Power of A...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn"
+                    onclick="openModal('./Books PDFs/the power of your attitude.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Power of Your Subconscious Mind" height="200"
+                src="./Books Thumbnail/the power of your subs.png" width="180" />
+            <div class="book-title">
+                The Power of Yo...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Psychology of Money" height="200" src="./Books Thumbnail/psycology of money.png"
+                width="180" />
+            <div class="book-title">
+                The Psychology...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./books PDFs/psycology of money.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Science of Self-Discipline" height="200"
+                src="./Books Thumbnail/the science of self descipline.png" width="180" />
+            <div class="book-title">
+                The Science of s...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn"
+                    onclick="openModal('./Books PDFs/the science of self discipline.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Constitution of India" height="200"
+                src="./Books Thumbnail/the constitution of india.png" width="180" />
+            <div class="book-title">
+                The Constitutio...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/constitution of india.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Karma" height="200" src="./Books Thumbnail/karma.png" width="180" />
+            <div class="book-title">
+                Karma
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Marcus Aurelius Meditations" height="200"
+                src="./Books Thumbnail/marcus aurelius.png" width="180" />
+            <div class="book-title">
+                Marcus Aurelius...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Antony Beevor The Second World War" height="200"
+                src="https://storage.googleapis.com/a1aa/image/Gn4rZ6wZeY0aZCyl2fDL50X1T4RhmnapYeLZv2ySaBB2y7jnA.jpg"
+                width="180" />
+            <div class="book-title">
+                Antony Beevor...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The World As I See It" height="200"
+                src="https://storage.googleapis.com/a1aa/image/tUvYydqpBA7jFZZiCIFxO68IwgvAAzogKeI3vO6KnBEm8exTA.jpg"
+                width="180" />
+            <div class="book-title">
+                The World As I...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Lincoln The Unknown" height="200"
+                src="https://storage.googleapis.com/a1aa/image/BqofAA7bkKQtWSwui7mRlzZbEwoezr6RpsXJYSGkGysR59xTA.jpg"
+                width="180" />
+            <div class="book-title">
+                Lincoln The Un...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Cosmos Carl Sagan" height="200"
+                src="https://storage.googleapis.com/a1aa/image/a09zSn5Z6cKHB1mxsfjLP4qodwRyMr5vZA0Hlm0SfrqX59xTA.jpg"
+                width="180" />
+            <div class="book-title">
+                Cosmos Carl Sag...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of A Complete History of Ratan Tata" height="200"
+                src="https://storage.googleapis.com/a1aa/image/JeuqizpKgTSecEUQs4ys6F50KrbIAlk7VqBtzDEhtfw7y7jnA.jpg"
+                width="180" />
+            <div class="book-title">
+                A Complete Hist...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Super-cop NSA Ajit Doval" height="200"
+                src="https://storage.googleapis.com/a1aa/image/IdBNSrZpVyoVF9gr5a9l781lpsQ1SfXFYiefriCxCn2Ny7jnA.jpg"
+                width="180" />
+            <div class="book-title">
+                Super-cop NSA...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of Success of Principles Chanakya" height="200"
+                src="https://storage.googleapis.com/a1aa/image/V8Dfyj3f3agkZEYlVgxfSwxPLQVuBGNrnf0RZgjhlBaNl3HPB.jpg"
+                width="180" />
+            <div class="book-title">
+                Success of Prin...
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+
+            </div>
+        </div>
+        <div class="book-card">
+            <img alt="Book cover of The Scam" height="200"
+                src="https://storage.googleapis.com/a1aa/image/OsMo8AJ9xQKQKZrxzXyinKmKb0VmKFK0TYRozVfpCkyi8exTA.jpg"
+                width="180" />
+            <div class="book-title">
+                The Scam
+            </div>
+            <div class="book-price">
+                $1.5
+            </div>
+            <div class="book-category">
+                Transformation of career...
+            </div>
+            <div class="book-actions">
+                <button class="read-btn" onclick="openModal('./Books PDFs/Bhagvad Geeta.pdf')">READ</button>
+
+                <i class="far fa-bookmark icon" onclick="toggleSave (this, 'The Magic Manifesting')"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal for PDF Preview -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <BR></BR><BR></BR><BR></BR><BR></BR><BR></BR>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="logo">
+            <img alt="Logo" height="50"
+                src="https://storage.googleapis.com/a1aa/image/R7mRhwpyVpJ4CF9tpGMkd7WACHFc4Au6J9UhjCIszvsfOk5JA.jpg"
+                width="100" />
+            <div class="contact-info">
+                <p>
+                    pagevista@gmail.com
+                </p>
+                <p>
+                    +91 997 7775436
+                </p>
+                <p>
+                    +91 9977775437
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <h3>
+                Customer Support
+            </h3>
+            <a href="#">
+                Help Center
+            </a>
+            <a href="#">
+                Terms of Service
+            </a>
+            <a href="#">
+                Privacy Policy
+            </a>
+            <a href="#">
+                Refund Policy
+            </a>
+        </div>
+        <div class="section">
+            <h3>
+                Navigation Links
+            </h3>
+            <a href="#">
+                Home
+            </a>
+            <a href="#">
+                Categories
+            </a>
+            <a href="#">
+                About Us
+            </a>
+            <a href="#">
+                Contact Us
+            </a>
+            <a href="#">
+                FAQ
+            </a>
+        </div>
+        <div class="subscribe">
+            <input placeholder="Input Email" type="email" />
+            <button>
+                Subscribe
+            </button>
+        </div>
+        <div class="social-icons">
+            <a href="#">
+                <i class="fas fa-envelope">
+                </i>
+            </a>
+            <a href="#">
+                <i class="fab fa-facebook-f">
+                </i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram">
+                </i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter">
+                </i>
+            </a>
+        </div>
+        <a class="google-play" href="#">
+            <i class="fab fa-google-play">
+            </i>
+            <span>
+                Get it on
+                <strong>
+                    Google Play
+                </strong>
+            </span>
+        </a>
+    </div>
+
+
+
+    <script src="./shortcut.js"></script>
+    <script src="./save.js"></script>
+    <script src="./script.js"></script>
+    <script src="./singn up google.js"></script>
+    <script src="./text_animation.js"></script>
+</body>
+
+</html>

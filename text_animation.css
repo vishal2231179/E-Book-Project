@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+  
+
+.text-container {
+    font-family: "Exo", serif;
+
+    font-size: 24px;
+    /* font-weight: bold; */
+    color: #dfcf47;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #cfcfcf;
+    margin-left: 2px;
+    animation: blinkCursor 0.7s steps(2, start) infinite;
+  }
+  .text {
+    display: inline-block;
+    animation: textAnimation 6s infinite;
+  }
+
+  @keyframes textAnimation {
+    0% {
+      content: "Turning Pages, Broadening Horizons!";
+    }
+    25% {
+      content: "Explore, Read, and Discover Your Vista!";
+    }
+    50% {
+      content: "Uncover New Vistas on Every Page!";
+    }
+    75% {
+      content: "Your Digital Gateway to Endless Stories!";
+    }
+    100% {
+      content: "Turning Pages, Broadening Horizons!";
+    }
+  }

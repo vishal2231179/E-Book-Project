@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1b29;                  
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #201d26;
+            padding: 40px;
+            border-radius: 15px;
+            width: 350px;
+            height: auto; /* Allow height to adjust based on content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo img {
+            width: 100px;
+        }
+        .welcome {
+            color: #A3E7E8;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .input-container {
+            margin-bottom: 15px;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #8d9191;
+            border-radius: 25px;
+            background-color: #201d26;
+            color: #A3E7E8;
+            font-size: 16px;
+        }
+        .input-container input::placeholder {
+            color: #777777;
+        }
+        .sign-up-btn {
+            background-color: #bdd9db;
+            color: #2A2A3B;
+            padding: 13px;
+            border: none;
+            border-radius: 25px;
+            width: 106%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            
+        }
+        .sign-up-btn:hover {
+            background-color: #a8cdd0;
+        }
+        #message {
+            margin: 10px 0;
+            color: red; /* Default color for messages */
+        }
+        .links {
+            margin-top: 20px;
+            color: #bdd9db;
+            font-size: 14px;
+        }
+        .links a {
+            color: #bdd9db;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            color: #bdd9db;
+            font-size: 14px;
+        }
+        .footer i {
+            margin-right: 5px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img alt="Vista logo" src="./Logo2.png" width="100"/>
+        </div>
+        <div class="welcome">
+            <img alt="Vista logo" src="./illustration.png" width="200" height="100"/>
+        </div>
+        <div class="input-container">
+            <input id="email" placeholder="Email" type="email" required/>
+        </div>
+        <div class="input-container">
+            <input id="password" placeholder="Create Password" type="password" required/>
+        </div>
+        <div class="input-container">
+            <input id="confirm-password" placeholder="Confirm Password" type="password" required/>
+        </div>
+        <button class="sign-up-btn" onclick="signUp()">
+            <i class="fas fa-lock"></i> Sign Up
+        </button>
+        <div id="message"></div>
+        <div class="links">
+            <p>
+                Don't have an account?
+                <a href="./signin email.html">Sign In</a>
+            </p>
+            <p>
+                Forgot your password?
+                <a href="#">Reset it</a>
+            </p>
+        </div>
+        <div class="footer">
+            <div style="cursor: pointer;" onclick="window.history.back();">
+                <i class="fas fa-arrow-left"></i> Back
+            </div>
+            <div onclick="window.location.href='http:// 127.0.0.1:5500/BLACK.HTML';" style="cursor: pointer;">
+                <i class="fas fa-home"></i> Homepage
+            </div>
+        </div>
+    </div>
+
+    <script>
+          function signUp() {
+            const email = document.getElementById('email').value.toLowerCase(); // Convert email to lowercase
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const messageDiv = document.getElementById('message');
+
+            // Clear previous messages
+            messageDiv.innerHTML = '';
+
+            // Validate email format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                messageDiv.innerHTML = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Validate password length
+            if (password.length < 8) {
+                messageDiv.innerHTML = 'Password must be at least 8 characters long.';
+                return;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                messageDiv.innerHTML = 'Passwords do not match.';
+                return;
+            }
+
+            // If all validations pass
+            messageDiv.style.color = 'green';
+            messageDiv.innerHTML = 'Sign-up successful!'; // Replace with your sign-up logic
+            // You can proceed with form submission or API call here
+        }
+        </script>
+</body>
+</html>

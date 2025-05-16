@@ -1,0 +1,143 @@
+<html>
+ <head>
+  <title>
+   Sign In
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1b29;                  
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #201d26;
+            padding: 40px;
+            border-radius: 15px;
+            width: 350px;
+            height: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .welcome {
+            color: #A3E7E8;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 10px;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #8d9191;
+            border-radius: 25px;
+            background-color:#201d26;
+            color: #A3E7E8;
+            font-size: 16px;
+        }
+        .input-container input::placeholder {
+            color: #777777;
+        }
+        .sign-in-btn {
+            background-color:#bdd9db;
+            color: #2A2A3B;
+            padding: 13px;
+            border: none;
+            border-radius: 25px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .sign-in-btn:hover {
+            background-color: #a8cdd0;
+        }
+        .links {
+            margin-top: 20px;
+            color:#bdd9db;
+            font-size: 14px;
+        }
+        .links a {
+            color: #bdd9db;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            color: #bdd9db;
+            font-size: 14px;
+        }
+        .footer i {
+            margin-right: 5px;
+        }
+        .sign-in-button img, .fa-lock{
+            width: 20px;
+            margin-right: 5px;
+            
+        } ::-webkit-scrollbar{
+        display: none;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="logo">
+    <img alt="Vista logo" height="" src="./Logo2.png" width="100"/>
+
+   </div>
+   <div class="welcome">
+    <img alt="Vista logo" height="100" width="200" src="./illustration.png"/>
+
+   </div>
+   <div class="input-container">
+    <input placeholder="Email" type="email"/>
+   </div>
+   <div class="input-container">
+    <input placeholder="Password" type="password"/>
+   </div>
+   <button class="sign-in-btn">
+    <i class="fas fa-lock"></i>
+
+    Sign In
+   </button>
+   <div class="links" onclick="window.history.back();">
+    <p>
+     Don't have an account?
+     <a href="./signup email.html">
+      Sign up
+     </a>
+    </p>
+    <p>
+     Forgot your password?
+     <a href="#">
+      Reset it
+     </a>
+    </p>
+   </div>
+   <div class="footer">
+    <div onclick="window.history.back();" style="cursor: pointer;">
+     <i class="fas fa-arrow-left"></i>
+     Back
+    </div>
+    <div onclick="window.location.href='http://127.0.0.1:5500/BLACK.HTML';" style="cursor: pointer;">
+        <i class="fas fa-home"></i>
+     Homepage
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
